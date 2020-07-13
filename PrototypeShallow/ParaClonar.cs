@@ -14,6 +14,8 @@ namespace PrototypeShallow
         public object Clone()
         {
             //Es un método de ICloneable que permite crear una copia superficial
+            //solo copia el objeto original y no sus dependientes
+            //es decir, si un atributo es un objeto, la copia referencia al mismo atributo que el original.
             return MemberwiseClone();
         }
     }
